@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html class="csstransforms3d">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>project two - news template</title>
+    <link href="../common/css/bootstrap.rtl.css" rel="stylesheet">
+    <link href="../common/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../common/css/animate.css" rel="stylesheet">
+    <link href="../common/css/font-awesome.css" rel="stylesheet">
+    <link href="../common/css/bootstrap-dropdownhover.css" rel="stylesheet">
+    <link href="../common/css/hover.css" rel="stylesheet">
+    <link href="../common/css/jasny-bootstrap.css" rel="stylesheet">
+    <link href="../common/css/p2.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--scroll to top btn-->
+<i class="fa fa-chevron-circle-up btn btn-info scroll-to-top"></i>
+<!--start off canvas menu-->
+<nav class="navmenu navmenu-custom navmenu-fixed-left offcanvas" id="mycanvas">
+    <a href="#" class="navmenu-brand">سـون لـرن</a>
+    <ul class="nav navmenu-nav">
+        <li class="active"><a href="#">ورود به سایت</a></li>
+        <li><a href="#">ثبت نام در سایت</a></li>
+        <li><a href="#">پنل مدیریت</a></li>
+        <li><a href="#">نظرات<span class="badge badge-offcanvas">77</span></a></li>
+        <li><a href="#">ارسـال مطلب</a></li>
+    </ul>
+    <ul class="nav navmenu-nav" data-hover="dropdown" data-animations="zoomIn fadeInRight zoomIn fadeInLeft">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">افزودن<span class="caret"></span> </a>
+            <ul class="dropdown-menu navmenu-nav submenu-offcanvas">
+                <li><a href="#">پست جدید</a></li>
+                <li><a href="#">کد جدید</a></li>
+                <li><a href="#">ابزار جدید</a></li>
+                <li class="divider"></li>
+                <li><a href="#">برگه جدید</a></li>
+                <li><a href="#">کاربر جدید</a></li>
+            </ul>
+
+    </ul>
+    <li>
+        <button class="btn btn-danger btn-block">خروج از سایت</button>
+    </li>
+</nav>
+<!--end off canvas menu-->
+<!--start modal registeration-->
+<div class="modal fade" id="registeration">
+    <div class="modal-dialog">
+        <!--modal content-->
+        <div class="modal-content">
+            <div class="modal-header btn-primary modal-header-custom">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">عضویت</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="نام کاربری ...">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                        <input type="text" class="form-control" placeholder="کلمه عبود">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control" placeholder="ایمیل ...">
+                    </div>
+                    <button class="btn btn-success center-block">ثبت نام</button>
+                </form>
+                <br>
+                <div class="alert alert-info text-center">اگر در سایت عضو نیستید در کمتر از یک دقیقه میتوانید در سایت
+                    ثبت نام کنید
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end modal registeration-->
+<!--start modal search-->
+<div class="modal fade" id="search">
+    <div class="modal-dialog">
+        <!--modal content-->
+        <div class="modal-content">
+            <div class="modal-header btn-warning modal-header-custom">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">جستجو در سایت ...</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">عبارت :</span>
+                        <input type="text" class="form-control" placeholder="جستجو ...">
+                        <div class="input-group-btn">
+                            <button class="btn btn-info">جستجو</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end modal search-->
+<!--start header-->
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 cl-effect-2" id="cl-effect-2">
+                <ul class="list-inline header-menu-link">
+                    <li><a href="#"><span data-hover="انجمن">انجمن</span></a></li>
+                    <li><a href="#"><span data-hover="تبلیغات">تبلیغات</span></a></li>
+                    <li><a href="#"><span data-hover="درباره ما">درباره ما</span></a></li>
+                    <li><a href="#"><span data-hover="تماس با ما">تماس با ما</span></a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#registeration"><span
+                            data-hover="عضویت">عضویت</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right logo-title">
+                <img class="pull-right" src="../common/img/img-p2/logo1.jpg" width="150" height="150" alt="">
+                <h1>ایران تـک</h1>
+                <h3>مرجع تخصصی آموزش و بـرنامه نویسی وب</h3>
+            </div>
+        </div>
+    </div>
+</header>
+<!--end header-->
+<!--start main menu-->
+<nav class="navbar navbar-custom">
+    <div class="container-fluid menu-main-container" data-spy="affix" data-offset-top="200">
+        <div class="navbar-header pull-right">
+            <button type="button" class="navbar-toggle navbar-toggle-custom" data-toggle="collapse" data-target="#menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><img src="../common/img/img-p2/home.png" alt=""></a>
+        </div>
+        <div class="navbar-header dropdown pull-left">
+            <a data-toggle="modal" data-target="#search" href="#" class="hvr-underline-from-center">
+                <i class="fa fa-search navbar-toggle icon-search"></i>
+            </a>
+            <a href="#" class="dropdown-toggle hvr-underline-from-center" data-toggle="dropdown">
+                <i class="fa fa-sign-in navbar-toggle icon-sign"></i>
+            </a>
+            <ul class="dropdown-menu panel panel-primary panel-custom">
+                <div class="panel-heading panel-heading-custom">
+                    <p class="text-center">ورود به سایت</p>
+                </div>
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="نام کاربری ...">
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                            <input type="text" class="form-control" placeholder="کلمه عبود">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label><input type="checkbox">مرا بخاطر بسپار</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-success center-block">ثبت نام</button>
+                    </form>
+                </div>
+            </ul>
+            <a href="#" class="hvr-underline-from-center" data-toggle="offcanvas" data-target="#mycanvas">
+                <i class="fa fa-bars navbar-toggle icon-bars"></i>
+            </a>
+        </div>
+        <div class="clearfix hidden-md hidden-lg"></div>
+        <div class="collapse navbar-collapse" id="menu" data-hover="dropdown"
+             data-animations="zoomIn fadeInRight zoomIn fadeInLeft">
+            <ul class="nav navbar-nav navbar-nav-custom">
+                <li><a class="hvr-bounce-to-top" href="#">دوره های آموزشی</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle hvr-bounce-to-top" data-toggle="dropdown" href="#">دوره های ویژه<span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu sub-menu">
+                        <li><a href="#">آموزش طراحی وب حرفه ای : پایه تا پیشرفته</a></li>
+                        <li><a href="#">آموزش جامع جاوااسکریپت و جی کودری : پایه تا پیشرفته</a></li>
+                        <li><a href="#">آموزش زبان PHP : پایه تا پیشرفته</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">آموزش جامع 70 ساعته فتوشاپ حرفه
+                                ای <i class="fa fa-caret-left" style="padding-right: 100px"></i></a>
+                            <ul class="dropdown-menu sub-menu">
+                                <li><a href="#">آموزش طراحی وب حرفه ای : پایه تا پیشرفته</a></li>
+                                <li><a href="#">آموزش جامع جاوااسکریپت و جی کودری : پایه تا پیشرفته</a></li>
+                                <li><a href="#">آموزش زبان PHP : پایه تا پیشرفته</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a class="hvr-bounce-to-top" href="#">برنامه نویسی</a></li>
+                <li><a class="hvr-bounce-to-top" href="#">گرافیک</a></li>
+                <li><a class="hvr-bounce-to-top" href="#">طراحی وب</a></li>
+                <li><a class="hvr-bounce-to-top" href="#">وردپرس</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--end main menu-->
+<!--start main content-->
+<section class="container">
+    <div class="row">
+        <!--start content-->
+        <article class="col-xs-12 col-md-8">
+            <!--start slider section-->
+            <div class="callbacks_container">
+                <ul class="rslides" id="slider">
+                    <li>
+                        <a href="#">
+                            <img src="../common/img/img-p2/slider1.jpg" alt="">
+                            <p class="caption">آموزش جامع فریمورک محبوب بوت استرپ</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../common/img/img-p2/slider2.jpg" alt="">
+                            <p class="caption">آموزش حرفه ای و 0 تا 100 جاوااسکریپت و جی کوئری</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../common/img/img-p2/slider3.jpg" alt="">
+                            <p class="caption">دوره جامع برنامه نویسی تحت ویندوز با زبان محبوب #C</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../common/img/img-p2/slider4.jpg" alt="">
+                            <p class="caption">کاملترین دوره آموزش PHP به زبان فارسی !</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../common/img/img-p2/slider5.jpg" alt="">
+                            <p class="caption">70 ساعت آموزش ویدیویی فتوشاپ - پایه تا پیشرفته</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../common/img/img-p2/slider6.jpg" alt="">
+                            <p class="caption">کاملترین دوره آموزش طراحی وب فارسی (HTML5 و CSS3)</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../common/img/img-p2/slider7.jpg" alt="">
+                            <p class="caption">حرفه ای ترین دوره آموزش طراحی قالب وردپرس</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--end slider section-->
+            <!-- start collapse tabs-->
+            <div class="panel-group panel-group-custom" id="accordion">
+                <div class="panel ">
+                    <div class="panel-heading panel-heading-custom">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#s1">جدیدتـرین مطالب منتشر شده
+                                <i class="fa fa-minus pull-left collapse-nav"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="s1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <ul class="collapse-item">
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای php</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی وب</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فتوشاپ</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزش آموزشی حرفه ای #C</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ خرداد</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای جاوااسکریپت</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ خرداد</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فریم ورک بوت استرپ</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۰ اردیبهشت</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی قالب وردپرس</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۳ اردیبهشت</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel ">
+                    <div class="panel-heading panel-heading-custom">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#s2">محبـوب ترین مطالب
+                                <i class="fa fa-plus pull-left collapse-nav"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="s2" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <ul class="collapse-item">
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای php</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی وب</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فتوشاپ</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزش آموزشی حرفه ای #C</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای جاوااسکریپت</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فریم ورک بوت استرپ</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی قالب وردپرس</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel ">
+                    <div class="panel-heading panel-heading-custom">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#s3">پرنظـرترین مطالب
+                                <i class="fa fa-plus pull-left collapse-nav"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="s3" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <ul class="collapse-item">
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای php</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی وب</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فتوشاپ</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزش آموزشی حرفه ای #C</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای جاوااسکریپت</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فریم ورک بوت استرپ</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                                <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی قالب وردپرس</a><span
+                                        class="cla-icon pull-left hidden-xs"><i class="fa fa-calendar pull-left"></i>۱۴ تیر</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end collapse tabs-->
+            <!-- start excerpt topic-->
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body panel-body-custom">
+                            <img class="img-responsive img-thumbnail center-block"
+                                 src="../common/img/img-p2/tumbnail.png" alt="">
+                            <div class="caption topic-title">
+                                <h1><a href="#">دوره آموزشی فریم ورک بوت استرپ</a></h1>
+                                <p>در جلسه شانزدهم و بخش اول می پرداریم به استفاده
+                                    عملی از فریم ورک بوت استرپ در قالب طراحی یک قالب م
+                                    درن فلت به سبک Hero Header .در جلسات مربوط به پروژ
+                                    ه های نهایی علاوه بر آشنایی کامل با ایجاد قالب های واکنشگرا تحت فریم ورک بوت ب
+                                    ا اقدام انواع پلاگین ها ,کدهای جاوااسکریپت و css برای...</p>
+                            </div>
+                        </div>
+                        <div class="panel-heading panel-heading-custom-excerpt">
+                            <ul class="list-inline" style="margin: 0px">
+                                <li><i class="fa fa-user"></i><a href="#">محمود شاهچراغی</a></li>
+                                <li><i class="fa fa-calendar-o"></i> ۹۹-۰۴-۱۴</li>
+                                <li><i class="fa fa-eye"></i>۸۹ بازدید</li>
+                                <li><i class="fa fa-comment"></i> ۴ نظر</li>
+                            </ul>
+                            <div class="angle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body panel-body-custom">
+                            <img class="img-responsive img-thumbnail center-block"
+                                 src="../common/img/img-p2/tumbnail.png" alt="">
+                            <div class="caption topic-title">
+                                <h1><a href="#">دوره آموزشی فریم ورک بوت استرپ</a></h1>
+                                <p>در جلسه شانزدهم و بخش اول می پرداریم به استفاده
+                                    عملی از فریم ورک بوت استرپ در قالب طراحی یک قالب م
+                                    درن فلت به سبک Hero Header .در جلسات مربوط به پروژ
+                                    ه های نهایی علاوه بر آشنایی کامل با ایجاد قالب های واکنشگرا تحت فریم ورک بوت ب
+                                    ا اقدام انواع پلاگین ها ,کدهای جاوااسکریپت و css برای...</p>
+                            </div>
+                        </div>
+                        <div class="panel-heading panel-heading-custom-excerpt">
+                            <ul class="list-inline" style="margin: 0px">
+                                <li><i class="fa fa-user"></i><a href="#">محمود شاهچراغی</a></li>
+                                <li><i class="fa fa-calendar-o"></i> ۹۹-۰۴-۱۴</li>
+                                <li><i class="fa fa-eye"></i>۸۹ بازدید</li>
+                                <li><i class="fa fa-comment"></i> ۴ نظر</li>
+                            </ul>
+                            <div class="angle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body panel-body-custom">
+                            <img class="img-responsive img-thumbnail center-block"
+                                 src="../common/img/img-p2/tumbnail.png" alt="">
+                            <div class="caption topic-title">
+                                <h1><a href="#">دوره آموزشی فریم ورک بوت استرپ</a></h1>
+                                <p>در جلسه شانزدهم و بخش اول می پرداریم به استفاده
+                                    عملی از فریم ورک بوت استرپ در قالب طراحی یک قالب م
+                                    درن فلت به سبک Hero Header .در جلسات مربوط به پروژ
+                                    ه های نهایی علاوه بر آشنایی کامل با ایجاد قالب های واکنشگرا تحت فریم ورک بوت ب
+                                    ا اقدام انواع پلاگین ها ,کدهای جاوااسکریپت و css برای...</p>
+                            </div>
+                        </div>
+                        <div class="panel-heading panel-heading-custom-excerpt">
+                            <ul class="list-inline" style="margin: 0px">
+                                <li><i class="fa fa-user"></i><a href="#">محمود شاهچراغی</a></li>
+                                <li><i class="fa fa-calendar-o"></i> ۹۹-۰۴-۱۴</li>
+                                <li><i class="fa fa-eye"></i>۸۹ بازدید</li>
+                                <li><i class="fa fa-comment"></i> ۴ نظر</li>
+                            </ul>
+                            <div class="angle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-body panel-body-custom">
+                            <img class="img-responsive img-thumbnail center-block"
+                                 src="../common/img/img-p2/tumbnail.png" alt="">
+                            <div class="caption topic-title">
+                                <h1><a href="#">دوره آموزشی فریم ورک بوت استرپ</a></h1>
+                                <p>در جلسه شانزدهم و بخش اول می پرداریم به استفاده
+                                    عملی از فریم ورک بوت استرپ در قالب طراحی یک قالب م
+                                    درن فلت به سبک Hero Header .در جلسات مربوط به پروژ
+                                    ه های نهایی علاوه بر آشنایی کامل با ایجاد قالب های واکنشگرا تحت فریم ورک بوت ب
+                                    ا اقدام انواع پلاگین ها ,کدهای جاوااسکریپت و css برای...</p>
+                            </div>
+                        </div>
+                        <div class="panel-heading panel-heading-custom-excerpt">
+                            <ul class="list-inline" style="margin: 0px">
+                                <li><i class="fa fa-user"></i><a href="#">محمود شاهچراغی</a></li>
+                                <li><i class="fa fa-calendar-o"></i> ۹۹-۰۴-۱۴</li>
+                                <li><i class="fa fa-eye"></i>۸۹ بازدید</li>
+                                <li><i class="fa fa-comment"></i> ۴ نظر</li>
+                            </ul>
+                            <div class="angle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end excerpt topic-->
+            <!-- start pagination-->
+            <nav class="mypagination">
+                <ul class="pagination pagination-lg">
+                    <li><a href="#"><span>&laquo;</span></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li><a href="#"><span>&raquo;</span></a></li>
+                </ul>
+            </nav>
+            <!-- end pagination-->
+        </article>
+        <!--end content-->
+        <!--start sidebar-->
+        <aside class="col-xs-12 col-md-4">
+            <!--start newslatter-->
+            <div class="panel panel-primary">
+                <div class="panel-heading news-letter-panel-heading">
+                    <p>خبـرنامه</p>
+                </div>
+                <div class="panel-body news-letter-panel-body">
+                    <p class="text-center">برای اطلاع از جدیدترین مطالب در خبرنامه عضو شوید</p>
+                    <form>
+                        <div class="form-group input-group">
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                            <input type="email" class="form-control" placeholder="ایمیل معتبر خود را وارد نمایید...">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-warning">عضویت</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="news-letter-footer text-center">
+                    <ul class="list-inline">
+                        <li><a href="#"><img src="../common/img/img-p2/rss.png" alt=""></a></li>
+                        <li><a href="#"><img src="../common/img/img-p2/gplus.png" alt=""></a></li>
+                        <li><a href="#"><img src="../common/img/img-p2/twitter.png" alt=""></a></li>
+                        <li><a href="#"><img src="../common/img/img-p2/fb.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--end newslatter-->
+            <!--start sidebar tabs-->
+            <div class="tabs">
+                <ul class="nav nav-tabs nav-tabs-custom nav-justified">
+                    <li class="active"><a data-toggle="tab" href="#tab1">برنامه نویسی</a></li>
+                    <li><a data-toggle="tab" href="#tab2">طراحـی وب</a></li>
+                    <li><a data-toggle="tab" href="#tab3">گرافیـک</a></li>
+                </ul>
+                <div class="tab-content tab-content-custom">
+                    <div id="tab1" class="tab-pane fade in active">
+                        <ul>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای php</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی وب</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فتوشاپ</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزش آموزشی حرفه ای #C</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای جاوااسکریپت</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فریم ورک بوت استرپ</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی قالب وردپرس</a></li>
+                        </ul>
+                    </div>
+                    <div id="tab2" class="tab-pane fade">
+                        <ul>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای php</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی وب</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فتوشاپ</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزش آموزشی حرفه ای #C</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای جاوااسکریپت</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فریم ورک بوت استرپ</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی قالب وردپرس</a></li>
+                        </ul>
+                    </div>
+                    <div id="tab3" class="tab-pane fade">
+                        <ul>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای php</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی وب</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فتوشاپ</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزش آموزشی حرفه ای #C</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای جاوااسکریپت</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای فریم ورک بوت استرپ</a></li>
+                            <li><a class="hvr-icon-back" href="#">دوره آموزشی حرفه ای طراحی قالب وردپرس</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--end sidebar tabs-->
+            <!--start comments section-->
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-heading-comments">
+                    <p>نظـرات کاربران</p>
+                </div>
+                <div class="panel-body">
+                    <ul class="comments-scroll">
+                        <li class="news-item"><img class="img-thumbnail comm-img"
+                                                   src="../common/img/img-p2/default-avatar.png" alt=""><a
+                                href="#">چگونه از بوت استرپ استفاده کنیم...</a></li>
+                        <li class="news-item"><img class="img-thumbnail comm-img"
+                                                   src="../common/img/img-p2/default-avatar.png" alt=""><a
+                                href="#">چگونه از بوت استرپ استفاده کنیم...</a></li>
+                        <li class="news-item"><img class="img-thumbnail comm-img"
+                                                   src="../common/img/img-p2/default-avatar.png" alt=""><a
+                                href="#">چگونه از بوت استرپ استفاده کنیم...</a></li>
+                        <li class="news-item"><img class="img-thumbnail comm-img"
+                                                   src="../common/img/img-p2/default-avatar.png" alt=""><a
+                                href="#">چگونه از بوت استرپ استفاده کنیم...</a></li>
+                        <li class="news-item"><img class="img-thumbnail comm-img"
+                                                   src="../common/img/img-p2/default-avatar.png" alt=""><a
+                                href="#">چگونه از بوت استرپ استفاده کنیم...</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--end comments section-->
+            <!--progress section-->
+            <div class="panel panel-primary">
+                <div class="panel-heading panel-heading-progress">
+                    <p>پیشرفت دورها</p>
+                </div>
+                <div class="panel-body">
+                    <p>دوره مجازی #C</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:15%">
+                            15%
+                        </div>
+                    </div>
+                    <p>دوره مجازی جاوااسکریپت</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:80%">
+                            80%
+                        </div>
+                    </div>
+                    <p>دوره مجازی بوت استرپ</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning progress-bar-striped active" style="width:90%">
+                            90%
+                        </div>
+                    </div>
+                    <p>دوره مجازی PHP</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped active" style="width:100%">
+                            100%
+                        </div>
+                    </div>
+                    <p>دوره مجازی طراحـی وب</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" style="width:100%">
+                            100%
+                        </div>
+                    </div>
+                    <p>دوره مجازی فتوشاپ</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary progress-bar-striped active" style="width:100%">
+                            100%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end progress section-->
+        </aside>
+        <!--end sidebar-->
+    </div>
+</section>
+<!--end main content-->
+<!--start footer section-->
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="col-sm-12 col-md-6 col-md-offset-3 sta-title">
+                <p><i class="fa fa-bar-chart"></i>آمار سایت</p>
+            </div>
+            <div class="clearfix"></div>
+            <ul class="site-sta">
+                <li><i class="fa fa-users"></i> کاربران آنلاین</li>
+                <li><i class="fa fa-eye"></i> کل بازدیدها</li>
+                <li><i class="fa fa-file"></i> کل مطالب</li>
+                <li><i class="fa fa-comments-o"></i> کل نظرات</li>
+                <li><i class="fa fa-user"></i>کاربران</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div class=" section-title col-sm-12 col-md-6 col-md-offset-3">
+                <p><i class="fa fa-th-list"></i>بخش های سایت</p>
+            </div>
+            <div class="clearfix"></div>
+            <ul class="site-section">
+                <li><a href="#"><i class="fa fa-dot-circle-o"></i>دوره های آموزشی</a></li>
+                <li><a href="#"><i class="fa fa-dot-circle-o"></i>دوره های ویژه</a></li>
+                <li><a href="#"><i class="fa fa-dot-circle-o"></i>دوره های مجازی</a></li>
+                <li><a href="#"><i class="fa fa-dot-circle-o"></i>دسته یندی مطالب</a></li>
+                <li><a href="#"><i class="fa fa-dot-circle-o"></i>برچسب های مطالب</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div class=" about-title col-sm-12 col-md-6 col-md-offset-3">
+                <p><i class="fa fa-th-list"></i>ایـران تـک</p>
+            </div>
+            <div class="clearfix"></div>
+            <p class="footer-about">از زمان افتتاح سایت تا کنون که بیش از 6 سال می گذره ، همواره هدفمون افزایش سطح
+                آموخته های بازدید کنندگان سایت در زمینه ی طراحی وب و زبان های برنامه نویسی تحت وب بوده . امیدواریم که
+                روز به روز بتونیم بیشتر به این مهم دست پیدا کنیم .
+
+                تیم نویسندگی ایـران تـک ، تشکیل شده از اعضای متخصص و فعال همواره سعی کرده است که در مقابل تمامی سوالات و
+                در خواست های بازدیدکنندگان پاسخگو باشه .</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12 footer-nav">
+            <h5 class="text-center copy-right"> تمامی فعاليت‌هاي سایت، تابع قوانين و مقررات جمهوري اسلامي ايران می
+                باشد</h5>
+            <nav class="footer-link">
+                <ul class="list-inline">
+                    <li><a href="#"><i class="fa fa-home"></i>صفحه اصلی</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i>تماس با ما</a></li>
+                    <li><a href="#"><i class="fa fa-rss-square"></i>فید</a></li>
+                    <li><a href="#"><i class="fa fa-sitemap"></i>نقشه سایت</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</footer>
+<!--end footer section-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+<script src="../common/js/jquery.min.1.11.2.js"></script>
+<script src="../common/js/bootstrap.js"></script>
+<script src="../common/js/bootstrap-dropdownhover.js"></script>
+<script src="../common/js/jasny-bootstrap.js"></script>
+<script src="../common/js/responsiveslides.js"></script>
+<script src="../common/js/jquery.bootstrap.newsbox.js"></script>
+<script src="../common/js/p2.js"></script>
+</body>
+</html>

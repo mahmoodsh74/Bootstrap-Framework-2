@@ -1,0 +1,165 @@
+@font-face {
+    font-family:'BYekan' ;
+    src: url('../fonts/BYekan.eot') format('eot'),
+    url('../fonts/BYekan.ttf') format('ttf'),
+    url('../fonts/BYekan.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.a{background-image: url("../img/nature.jpg");
+    width: 1440px;
+
+
+}
+*{
+    font-family: BYekan;
+}
+a:hover{text-decoration: none;}
+.grey{
+    background-color: #ccc;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.title-red{
+    color: red;
+}
+.title-blue{
+    color: blue;
+}
+.title-white{
+    color: #fff;
+}
+.title-yellow{
+    color: #ec971f;
+}
+#my-container{
+    width: 940px;
+}
+
+/*template layout*/
+#your-container{
+    width: 1024px;
+}
+/*body{
+    background-image: url("../img/bg.gif");
+}*/
+.slider{
+    min-height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 15px;
+}
+.menu{
+    min-height: 65px;
+}
+.footer{
+    min-height: 100px;
+}
+/*
+.container{
+    color: red !important;
+}*/
+
+/*media object*/
+.comm{
+    border: 1px solid #ccc;
+    border-top: 5px solid #ccc;
+    border-radius: 5px;
+}
+.modal{
+    overflow-y:hidden;
+}
+
+.modal-md{
+    width: 700px;
+}
+#my-gallery img:hover{
+    cursor: pointer;
+}
+/*slider effect*/
+.carousel .item{
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+}
+.carousel .active.left, .carousel .active.right{
+    left:0;
+    opacity:0;
+    z-index: 2;
+}
+.carousel .carousel-control{
+    opacity: 1;
+}
+.carousel .next, .carousel .prev{
+    left:0;
+    opacity:1;
+    z-index: 1;
+}
+.carousel .carousel-control{
+    visibility: hidden;
+}
+.carousel:hover .carousel-control{
+    visibility:visible;
+    cursor: pointer;
+}
+
+/*s1 style*/
+#s1{
+    padding: 80px;
+    color: #fff;
+    background-color: #ff0000;
+    height: 534px;
+}
+#s2{
+    padding: 80px;
+    color: #fff;
+    background-color: #17ff0a;
+    height: 534px;
+}
+#s3{
+    padding: 80px;
+    color: #fff;
+    background-color: #0020ff;
+    height: 534px;
+}
+#s4{
+    padding: 80px;
+    color: #fff;
+    background-color: #b68c6e;
+    height: 534px;
+}
+#s5{
+    padding: 80px;
+    color: #fff;
+    background-color: #6f6c75;
+    height: 534px;
+}
+/*header style*/
+#header{
+    background-color: #0020ff;
+    color: #fff;
+    height: 200px;
+    padding: 50px;
+}
+.affix{
+    width: 100%;
+    top: 0;
+}
+.affix +.container-fluid{
+    padding-top: 50px;
+}
+.navbar{margin-bottom: 0px}
